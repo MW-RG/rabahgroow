@@ -1,9 +1,14 @@
 import React from 'react';
+import { CoMenu } from '../components/Menu';
 
 export default function CoPartner() {
   return (
-    <div>
-      협력 기관 아이콘 나열(클릭하면 페이지 이동)
+    <div className='mt-5 flex'>
+      <CoMenu thisPage='협력기관' />
+      <div className='w-full'>
+        <div className='bg-white h-20 pt-5 ml-7 text-3xl font-bold'>Company Overview</div>
+        <div className='bg-slate-200 h-20'>dd</div>
+      </div>
     </div>
   );
 }

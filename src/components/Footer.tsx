@@ -6,10 +6,14 @@ export default function Footer() {
 
   return (
     <div className='w-full h-20 bg-[#f8f8f8] absolute z-0 flex items-center border bottom-0'>  
-      <div onClick={clickHandler}><img alt="logo" src={logo} className='w-28 h-14 ml-80 hover:cursor-pointer' /></div>
-      <div className='text-[#737373] text-sm ml-32'>
+      <div onClick={clickHandler}><img alt="logo" src={logo} className='w-28 h-14 ml-[300%] hover:cursor-pointer' /></div>
+      <div className='text-[#737373] text-sm ml-[30%]'>
         <p>경기도 성남시 분당구 성남대로 926번길 10, 5층 R547호</p>
         <p>Copyright 2022. Rabah Groow. All rights reserved. </p>
+      </div>
+      <div className='text-[#737373] text-sm ml-20'>
+        <p>대표이사 : 홍성삼</p>
+        <p>sungsamhong@rabahgroow.com</p>
       </div>
     </div>
   );

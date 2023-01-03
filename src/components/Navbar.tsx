@@ -61,12 +61,12 @@ const NavbarOn = ({setIsHover} : Props) => {
         </div>
       </div>
       <div
-        className='flex bg-white text-center right-11 absolute z-10 animate-navbar'
+        className='flex bg-white text-center right-11 absolute z-20 animate-navbar'
         onMouseOver={() => setIsHover(true) }
         onMouseOut={() => setIsHover(false) }
       >
         <div className='mr-8'>
-          <Button location={'introduction'}>회사개요</Button>
+          <Button location={'overview'}>회사개요</Button>
           <Button location={'history'}>회사연혁</Button>
           <Button location={'vision'}>회사비전</Button>
           <Button location={'partner'}>협력기관</Button>

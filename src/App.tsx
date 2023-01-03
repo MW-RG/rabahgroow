@@ -2,7 +2,6 @@ import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar'
 import CoComingWay from './pages/CoComingWay';
-import CoIntroduction from './pages/CoIntroduction';
 import Main from './pages/Main';
 import CoPartner from './pages/CoPartner';
 import BizSecurity from './pages/BizSecurity';
@@ -15,6 +14,7 @@ import TechData from './pages/TechData';
 import Alliance from './pages/Alliance';
 import CoHistory from './pages/CoHistory';
 import CoVision from './pages/CoVision';
+import CoOverview from './pages/CoOverview';
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route path='/' element={ <Main /> } />
           
-          <Route path='/introduction' element={ <CoIntroduction /> } />
+          <Route path='/overview' element={ <CoOverview /> } />
           <Route path='/history' element={ <CoHistory /> } />
           <Route path='/vision' element={ <CoVision /> } />
           <Route path='/partner' element={ <CoPartner /> } />
