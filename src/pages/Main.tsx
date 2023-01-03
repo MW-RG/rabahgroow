@@ -31,7 +31,7 @@ const Banner = () => {
       onMouseOut={ () => setButtonDisplay(false) }
       className='relative'
     >
-      dd
+      ff
       <img alt="banner" src={require(`../assets/images/banner${img}.png`)} className={imgClass} />
       {buttonDisplay
         ? <div>
