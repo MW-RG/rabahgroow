@@ -19,7 +19,7 @@ const Banner = () => {
   // const slide = useEffect(() => {
   //   setTimeout(imgRightHandler, 1000 * 30);
   // }, [img]);
-  const imgAni = useEffect(() => {
+  useEffect(() => {
     setImgClass('w-full h-full animate-bannerImg')
     setTimeout(() => setImgClass('w-full h-full'), 1000)
   }, [img])
