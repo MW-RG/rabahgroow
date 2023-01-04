@@ -24,7 +24,7 @@ export default function ComingWay() {
             <p className='font-semibold text-lg mb-3'><IoMdBus className='inline-block text-green-500' size={25} />3416번 / 2412번 / 강남06번</p>
             <p className='ml-6 mb-7'>수서역 5번 출구, 수서역 로즈데일빌딩 방면 하차 후 직진 방향으로 도보 1분</p>
           </div>
-          <div className='max-[1610px]:ml-20 max-[1610px]:mb-7'>
+          <div className='min-[1610px]:ml-auto max-[1610px]:ml-20 max-[1610px]:mb-7'>
             <NaverMap />
           </div>
         </div>
