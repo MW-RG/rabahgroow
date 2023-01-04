@@ -11,9 +11,10 @@ export function CoMenu({thisPage} : {thisPage: string}) {
   const [isHover, setIsHover] = useState<string>(thisPage);
 
   return (
-    <div className=' w-[15%] pt-14 pb-96 bg-blue-400 text-center'>
-      <ul>
-        <li className='text-white font-semibold text-2xl mb-5'>- Company -</li>
+    <div className='w-[15%] h-auto pt-14 pb-72 bg-blue-400 text-center'>
+      <div>
+        <div className='text-white font-semibold text-2xl mb-10 max-lg:hidden'>- Company -</div>
+        <div className='text-white font-semibold text-2xl mb-10 lg:hidden'>Company</div>
         {isHover === '회사개요'
         ? <SelectLi setIsHover={setIsHover} thisPage={`${thisPage}`} location={'overview'}>회사개요</SelectLi>
         : <Li setIsHover={setIsHover}>회사개요</Li>}
@@ -26,7 +27,7 @@ export function CoMenu({thisPage} : {thisPage: string}) {
         {isHover === '협력기관'
         ? <SelectLi setIsHover={setIsHover} thisPage={`${thisPage}`} location={'partner'}>협력기관</SelectLi>
         : <Li setIsHover={setIsHover}>협력기관</Li>}
-      </ul>
+      </div>
     </div>
   );
 }
@@ -35,9 +36,10 @@ export function BizMenu({thisPage} : {thisPage: string}) {
   const [isHover, setIsHover] = useState<string>(thisPage);
 
   return (
-    <div className=' w-[15%] pt-14 h-auto pb-72 bg-blue-400 text-center'>
-      <ul>
-        <li className='text-white font-semibold text-2xl mb-5'>- Company -</li>
+    <div className=' w-[15%] h-auto pt-14 pb-72 bg-blue-400 text-center'>
+      <div>
+        <div className='text-white font-semibold text-2xl mb-10 max-lg:hidden'>- Business {<br/>}& AI Tech -</div>
+        <div className='text-white font-semibold text-2xl mb-10 lg:hidden'>Business {<br/>}& AI Tech</div>
         {isHover === '국방/사이버보안'
         ? <SelectLi setIsHover={setIsHover} thisPage={`${thisPage}`} location={'biz-security'}>국방/사이버보안</SelectLi>
         : <Li setIsHover={setIsHover}>국방/사이버보안</Li>}
@@ -50,7 +52,7 @@ export function BizMenu({thisPage} : {thisPage: string}) {
         {isHover === '프로젝트실적'
         ? <SelectLi setIsHover={setIsHover} thisPage={`${thisPage}`} location={'performance'}>프로젝트실적</SelectLi>
         : <Li setIsHover={setIsHover}>프로젝트실적</Li>}
-      </ul>
+      </div>
     </div>
   );
 }
@@ -60,21 +62,27 @@ const SelectLi = ({setIsHover, location, thisPage, children} : Props) => {
     window.location.href = param;
   }
   return(
-    <li
-      className='text-blue-500 font-semibold lg:text-2xl sm:text-xl mb-5 pt-3 bg-white h-14 w-40 m-auto hover:cursor-pointer'
+    <div
       onMouseOver={() => { setIsHover(`${children}`) }}
       onMouseOut={() => { setIsHover(`${thisPage}`) }}
-      onClick={clickHandler(`${location}`)}
-    >{children}</li>
+    >
+      <button
+        className='text-white outline outline-offset-8 outline-white rounded-sm font-semibold lg:text-2xl sm:text-[1rem] mb-8'
+        onClick={clickHandler(`${location}`)}
+      >{children}</button>
+    </div>
   )
 }
 
 const Li = ({setIsHover, thisPage, children} : Props) => {
   return(
-    <li
-      className='text-white font-semibold lg:text-2xl sm:text-xl mb-5 hover:cursor-pointer'
+    <div
       onMouseOver={() => { setIsHover(`${children}`) }}
       onMouseOut={() => { setIsHover(`${thisPage}`) }}
-    >{children}</li>
+    >
+      <button
+        className='text-white font-semibold lg:text-2xl sm:text-[1rem] mb-8'
+      >{children}</button>
+    </div>
   )
 }

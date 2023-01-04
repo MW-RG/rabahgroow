@@ -6,7 +6,7 @@ export default function CoPartner() {
     <div className='mt-5 flex z-10 h-auto'>
       <CoMenu thisPage='협력기관' />
       <div className='w-full'>
-        <div className='bg-slate-200 text-blue-500 h-52 pt-28 pl-20 text-3xl font-bold'>{'<'} 협력기관 {'>'}</div>
+        <div className='bg-slate-200 text-blue-500 h-28 pt-10 pl-20 text-3xl font-bold'>{'<'} 협력기관 {'>'}</div>
         <div className='w-[70%] grid lg:grid-cols-3 sm:grid-cols-2 grid-flow-row lg:gap-10 sm:gap-5 lg:mt-10 sm:mt-5 ml-20'>
           <ImgBox location='https://www.add.re.kr/kps'>add</ImgBox>
           <ImgBox location='https://www.kict.re.kr/'>kict</ImgBox>

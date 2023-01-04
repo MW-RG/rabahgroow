@@ -18,8 +18,7 @@ export default function Navbar() {
 const NavbarOff = ({setIsHover} : Props) => {
   const titleCo = 'mr-14 text-2xl font-semibold text-blue-500 hover:cursor-pointe';
   const titleBiz = 'mr-14 text-2xl font-semibold text-blue-500 hover:cursor-pointer';
-  const titleTech = 'mr-8 text-2xl font-semibold text-blue-500 hover:cursor-pointer';
-  const titleSupport = 'mr-12 text-2xl font-semibold text-blue-500 hover:cursor-pointer';
+  const titleSupport = 'mr-28 text-2xl font-semibold text-blue-500 hover:cursor-pointer';
   const clickHandler = () => { window.location.href = '/' }
 
   return (
@@ -31,8 +30,7 @@ const NavbarOff = ({setIsHover} : Props) => {
         className='flex'
       >
         <p className={titleCo}>Company</p>
-        <p className={titleBiz}>Business</p>
-        <p className={titleTech}>Technology</p>
+        <p className={titleBiz}>Business & AI Tech</p>
         <p className={titleSupport}>Support</p>
       </div>
     </div>
@@ -42,8 +40,7 @@ const NavbarOff = ({setIsHover} : Props) => {
 const NavbarOn = ({setIsHover} : Props) => {
   const titleCo = 'mr-14 text-2xl font-semibold text-blue-500 hover:cursor-pointer';
   const titleBiz = 'mr-14 text-2xl font-semibold text-blue-500 hover:cursor-pointer';
-  const titleTech = 'mr-8 text-2xl font-semibold text-blue-500 hover:cursor-pointer';
-  const titleSupport = 'mr-12 text-2xl font-semibold text-blue-500 hover:cursor-pointer';
+  const titleSupport = 'mr-28 text-2xl font-semibold text-blue-500 hover:cursor-pointer';
   const clickHandler = () => { window.location.href = '/' }
 
   return (
@@ -55,8 +52,7 @@ const NavbarOn = ({setIsHover} : Props) => {
           onMouseOut={() => setIsHover(false) }
         >
           <p className={titleCo}>Company</p>
-          <p className={titleBiz}>Business</p>
-          <p className={titleTech}>Technology</p>
+          <p className={titleBiz}>Business & AI Tech</p>
           <p className={titleSupport}>Support</p>
         </div>
       </div>
@@ -65,24 +61,19 @@ const NavbarOn = ({setIsHover} : Props) => {
         onMouseOver={() => setIsHover(true) }
         onMouseOut={() => setIsHover(false) }
       >
-        <div className='mr-8'>
+        <div className='mr-20 pl-5'>
           <Button location={'overview'}>회사개요</Button>
           <Button location={'history'}>회사연혁</Button>
           <Button location={'vision'}>회사비전</Button>
           <Button location={'partner'}>협력기관</Button>
         </div>
-        <div className='mr-8'>
+        <div className='mr-20'>
           <Button location={'biz-security'}>국방/사이버보안 사업</Button>
           <Button location={'biz-safety'}>건설/안전 사업</Button>
           <Button location={'biz-data'}>데이터 관련 사업</Button>
           <Button location={'performance'}>프로젝트 실적</Button>
         </div>
-        <div className='mr-8'>
-          <Button location={'tech-security'}>Security AI</Button>
-          <Button location={'tech-safety'}>Safety AI</Button>
-          <Button location={'tech-data'}>Data AI</Button>
-        </div>
-        <div>
+        <div className='mr-16'>
           <Button location={'alliance'}>제휴문의</Button>
           <Button location={'coming-way'}>오시는길</Button>
         </div>

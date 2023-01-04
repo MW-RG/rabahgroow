@@ -8,9 +8,6 @@ import BizSecurity from './pages/BizSecurity';
 import BizSafety from './pages/BizSafety';
 import BizData from './pages/BizData';
 import BizPerformance from './pages/BizPerformance';
-import TechSecurity from './pages/TechSecurity';
-import TechSafety from './pages/TechSafety';
-import TechData from './pages/TechData';
 import Alliance from './pages/Alliance';
 import CoHistory from './pages/CoHistory';
 import CoVision from './pages/CoVision';
@@ -34,10 +31,6 @@ function App() {
           <Route path='/biz-safety' element={ <BizSafety /> } />
           <Route path='/biz-data' element={ <BizData /> } />
           <Route path='/performance' element={ <BizPerformance /> } />
-
-          <Route path='/tech-security' element={ <TechSecurity /> } />
-          <Route path='/tech-safety' element={ <TechSafety /> } />
-          <Route path='/tech-data' element={ <TechData /> } />
 
           <Route path='/alliance' element={ <Alliance /> } />
           <Route path='/coming-way' element={ <CoComingWay /> } />
