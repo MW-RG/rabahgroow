@@ -11,7 +11,7 @@ export function CoMenu({thisPage} : {thisPage: string}) {
   const [isHover, setIsHover] = useState<string>(thisPage);
 
   return (
-    <div className=' w-[15%] pt-14 bg-blue-400 text-center'>
+    <div className=' w-[15%] pt-14 pb-96 bg-blue-400 text-center'>
       <ul>
         <li className='text-white font-semibold text-2xl mb-5'>- Company -</li>
         {isHover === '회사개요'

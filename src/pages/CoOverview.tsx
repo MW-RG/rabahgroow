@@ -5,12 +5,12 @@ import { BsCircleFill } from 'react-icons/bs'
 
 export default function CoOverview() {
   return (
-    <div className='mt-5 flex z-10 h-screen'>
+    <div className='mt-5 flex z-10 h-auto'>
       <CoMenu thisPage='회사개요' />
       <div className='w-full'>
         <div className='bg-slate-200 text-blue-500 h-44 pt-28 pl-20 text-3xl font-bold'>{'<'} 회사개요 {'>'}</div>
         <div className='bg-slate-200 h-10 pt-3 pl-20 text-xl font-bold'>라바그루(주)는 R&D 및 AI 전문기업입니다.</div>
-        <div className='bg-slate-200 h-10 pt-3 pl-20 text-xl'>사이버보안, 국방, 건설안전 분야에 데이터분석 플랫폼, AI 모델 연구개발, 보안 알고리즘 연구개발을 진행하고 있습니다.</div>
+        <div className='bg-slate-200 h-16 pt-3 pb-5 pl-20 pr-20 text-xl'>사이버보안, 국방, 건설안전 분야에 데이터분석 플랫폼, AI 모델 연구개발, 보안 알고리즘 연구개발을 진행하고 있습니다.</div>
         <div className='relative bg-slate-200 pt-7'>
           <img alt='img' src={img} className='absolute w-full' />
           <BsCircleFill className='absolute text-white mt-[7.7rem] ml-20' size={7} /><p className='absolute mt-28 ml-28 text-xl text-white font-medium'>회사명<span className='pl-20 font-bold'>라바그루(주)</span></p>

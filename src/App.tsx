@@ -18,7 +18,7 @@ import CoOverview from './pages/CoOverview';
 
 function App() {
   return (
-    <div className='font-ibm relative'>      
+    <div className='font-ibm relative h-auto'>      
       <div className=' h-auto min-h-full pb-20'>
         <Navbar />
 
