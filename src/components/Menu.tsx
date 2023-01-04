@@ -57,6 +57,25 @@ export function BizMenu({thisPage} : {thisPage: string}) {
   );
 }
 
+export function SupportMenu({thisPage} : {thisPage: string}) {
+  const [isHover, setIsHover] = useState<string>(thisPage);
+
+  return (
+    <div className=' w-[15%] h-auto pt-14 pb-72 bg-blue-400 text-center'>
+      <div>
+        <div className='text-white font-semibold text-2xl mb-10 max-lg:hidden'>- Support -</div>
+        <div className='text-white font-semibold text-2xl mb-10 lg:hidden'>Support</div>
+        {isHover === '제휴문의'
+        ? <SelectLi setIsHover={setIsHover} thisPage={`${thisPage}`} location={'alliance'}>제휴문의</SelectLi>
+        : <Li setIsHover={setIsHover}>제휴문의</Li>}
+        {isHover === '오시는길'
+        ? <SelectLi setIsHover={setIsHover} thisPage={`${thisPage}`} location={'coming-way'}>오시는길</SelectLi>
+        : <Li setIsHover={setIsHover}>오시는길</Li>}
+      </div>
+    </div>
+  );
+}
+
 const SelectLi = ({setIsHover, location, thisPage, children} : Props) => {
   const clickHandler = (param : string) => () => {
     window.location.href = param;

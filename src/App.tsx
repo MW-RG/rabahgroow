@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar'
-import CoComingWay from './pages/CoComingWay';
+import ComingWay from './pages/ComingWay';
 import Main from './pages/Main';
 import CoPartner from './pages/CoPartner';
 import BizSecurity from './pages/BizSecurity';
@@ -33,7 +33,7 @@ function App() {
           <Route path='/performance' element={ <BizPerformance /> } />
 
           <Route path='/alliance' element={ <Alliance /> } />
-          <Route path='/coming-way' element={ <CoComingWay /> } />
+          <Route path='/coming-way' element={ <ComingWay /> } />
         </Routes>
       </div>
 
