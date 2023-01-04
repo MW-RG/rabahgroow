@@ -31,13 +31,37 @@ export function CoMenu({thisPage} : {thisPage: string}) {
   );
 }
 
+export function BizMenu({thisPage} : {thisPage: string}) {
+  const [isHover, setIsHover] = useState<string>(thisPage);
+
+  return (
+    <div className=' w-[15%] pt-14 h-auto pb-72 bg-blue-400 text-center'>
+      <ul>
+        <li className='text-white font-semibold text-2xl mb-5'>- Company -</li>
+        {isHover === '국방/사이버보안'
+        ? <SelectLi setIsHover={setIsHover} thisPage={`${thisPage}`} location={'biz-security'}>국방/사이버보안</SelectLi>
+        : <Li setIsHover={setIsHover}>국방/사이버보안</Li>}
+        {isHover === '건설/안전'
+        ? <SelectLi setIsHover={setIsHover} thisPage={`${thisPage}`} location={'biz-safety'}>건설/안전</SelectLi>
+        : <Li setIsHover={setIsHover}>건설/안전</Li>}
+        {isHover === '데이터'
+        ? <SelectLi setIsHover={setIsHover} thisPage={`${thisPage}`} location={'biz-data'}>데이터</SelectLi>
+        : <Li setIsHover={setIsHover}>데이터</Li>}
+        {isHover === '프로젝트실적'
+        ? <SelectLi setIsHover={setIsHover} thisPage={`${thisPage}`} location={'performance'}>프로젝트실적</SelectLi>
+        : <Li setIsHover={setIsHover}>프로젝트실적</Li>}
+      </ul>
+    </div>
+  );
+}
+
 const SelectLi = ({setIsHover, location, thisPage, children} : Props) => {
   const clickHandler = (param : string) => () => {
     window.location.href = param;
   }
   return(
     <li
-      className='text-blue-500 font-semibold text-2xl mb-5 pt-3 bg-white h-14 w-36 m-auto hover:cursor-pointer'
+      className='text-blue-500 font-semibold lg:text-2xl sm:text-xl mb-5 pt-3 bg-white h-14 w-40 m-auto hover:cursor-pointer'
       onMouseOver={() => { setIsHover(`${children}`) }}
       onMouseOut={() => { setIsHover(`${thisPage}`) }}
       onClick={clickHandler(`${location}`)}
@@ -48,7 +72,7 @@ const SelectLi = ({setIsHover, location, thisPage, children} : Props) => {
 const Li = ({setIsHover, thisPage, children} : Props) => {
   return(
     <li
-      className='text-white font-semibold text-2xl mb-5 hover:cursor-pointer'
+      className='text-white font-semibold lg:text-2xl sm:text-xl mb-5 hover:cursor-pointer'
       onMouseOver={() => { setIsHover(`${children}`) }}
       onMouseOut={() => { setIsHover(`${thisPage}`) }}
     >{children}</li>
